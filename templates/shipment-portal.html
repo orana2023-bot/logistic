@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shipment Portal</title>
+  <link rel="stylesheet" href="/css/shipment-portal.css">
+</head>
+<body>
+  <h1>Shipment Portal</h1>
+  <div class="form-container">
+    <form id="shipmentForm">
+      <label for="shipmentId">Shipment ID / Tracking Number</label>
+      <input type="text" id="shipmentId" required>
+
+      <label for="orderNumber">Order Number</label>
+      <input type="text" id="orderNumber">
+
+      <label for="contents">Package Contents</label>
+      <textarea id="contents" rows="3"></textarea>
+
+      <label for="carrier">Carrier</label>
+      <input type="text" id="carrier">
+
+      <label for="origin">Origin</label>
+      <input type="text" id="origin">
+
+      <label for="destination">Destination</label>
+      <input type="text" id="destination">
+
+      <label for="deliveryDate">Estimated Delivery Date</label>
+      <input type="date" id="deliveryDate">
+
+      <label for="status">Shipment Status</label>
+      <select id="status">
+        <option value="shipped">Shipped</option>
+        <option value="in-transit">In Transit</option>
+        <option value="delayed">Delayed</option>
+        <option value="delivered">Delivered</option>
+      </select>
+
+      <label for="receiver">Receiver Details</label>
+      <textarea id="receiver" rows="2"></textarea>
+
+      <button type="submit">Add Shipment</button>
+    </form>
+  </div>
+
+  <div class="cards-container" id="cardsContainer"></div>
+
+  <script>
+    const form = document.getElementById('shipmentForm');
+    const cardsContainer = document.getElementById('cardsContainer');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const shipmentData = {
+        shipmentId: document.getElementById('shipmentId').value,
+        orderNumber: document.getElementById('orderNumber').value,
+        contents: document.getElementById('contents').value,
+        carrier: document.getElementById('carrier').value,
+        origin: document.getElementById('origin').value,
+        destination: document.getElementById('destination').value,
+        deliveryDate: document.getElementById('deliveryDate').value,
+        status: document.getElementById('status').value,
+        receiver: document.getElementById('receiver').value
+      };
+
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.innerHTML = `
+        <h3>Shipment ${shipmentData.shipmentId}</h3>
+        <p><strong>Order:</strong> ${shipmentData.orderNumber}</p>
+        <p><strong>Contents:</strong> ${shipmentData.contents}</p>
+        <p><strong>Carrier:</strong> ${shipmentData.carrier}</p>
+        <p><strong>Route:</strong> ${shipmentData.origin} → ${shipmentData.destination}</p>
+        <p><strong>Delivery Date:</strong> ${shipmentData.deliveryDate}</p>
+        <p><strong>Status:</strong> ${shipmentData.status}</p>
+        <p><strong>Receiver:</strong> ${shipmentData.receiver}</p>
+      `;
+
+      cardsContainer.appendChild(card);
+      form.reset();
+    });
+  </script>
+</body>
+</html>
