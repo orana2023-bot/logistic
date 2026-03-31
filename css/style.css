@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+}
+
+.first_nav_bar {
+    height: 5vh;
+    width: 100%;
+    background-color: rgb(16, 16, 62);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgb(233, 232, 232);
+
+}
+.first_nav_bar i{
+    color: white;
+}
+
+.second_nav_bar {
+    height: 10vh;
+    width: 100%;
+    color: aliceblue;
+    box-shadow: 5px 5px 10px gray;
+    display: flex;
+    gap: 50%;
+    align-items: center;
+    /* position: fixed; */
+    /* top: 5vh; */
+}
+
+.s_left_nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 30%; */
+}
+
+.s_left_nav .logo {
+    height: 25%;
+    width: 25%;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.first_nav_bar .f_right_nav a {
+    color:white;
+    text-decoration: none;
+
+}
+
+.f_right_nav {
+    display: flex;
+    gap: 40px;
+}
+
+.main_video {
+    height: 90vh;
+    width: 1520px;
+    overflow-y:hidden;
+}
+
+.main_video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* makes it look better */
+}
+
+.second_nav_bar .s_right_nav a {
+    text-decoration: none;
+    font-size: 1.2em;
+
+    color: black;
+}
+
+.s_right_nav {
+    display: flex;
+    gap: 30px;
+}
+
+.s_left_nav h2 {
+    color: black;
+}
+
+.no-controls::-webkit-media-controls {
+    display: none !important;
+} 
+
+.main {
+    height: 90vh;
+    width: 100vw;
+    /* border: 2px solid black; */
+    display: flex;
+    margin-top: 5%
+}
+
+.main_right {
+    height: 100%;
+    width: 48%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    row-gap: 5%;
+
+
+}
+
+
+
+.main_right .img {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 3vh;
+
+
+}
+
+.img1 {
+    background-image: url('../assets/photo-1759826350352-c5b0b77729bd.avif');
+}
+
+.img2 {
+    background-image: url('../assets/photo-1769144256207-bc4bb75b29db.avif');
+}
+
+.img3 {
+    background-image: url('../assets/photo-1773652966382-668b2eb3f369.avif');
+}
+
+.img4 {
+    background-image: url('../assets/premium_photo-1748859325854-d1cf7c98ede4.avif');
+}
+
+.main_left {
+    height: 100%;
+    width: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.main_left p {
+    width: 60%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.main2 {
+    height: 40vh;
+    width: 100vw;
+    margin-top: 5%;
+
+}
+
+.main2 img {
+    height: 100%;
+    width: 100%;
+}
+.main3{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+}
+.main3_left{
+     height:100%;
+     width: 50%;
+     display: flex;
+     align-items: center;
+     margin-left:6%;
+}
+.main3 .main3_left img{
+      height:70%;
+      width:80%;
+      border-radius:3vh;
+      
+}
+.main3_right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+.main3_right p{
+    width: 80%;
+    font-size: 1.2rem;
+    /* text-align: center; */
+}
+.main4{
+    height:100vh;
+    width: 100vw;
+    /* border: 1px solid black; */
+    overflow-y: hidden;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+
+
+}
+.main4-4{
+    height:100vh;
+    width:100%;
+    display: flex;
+    gap:1%;
+    margin-top: 5%;
+    overflow-y: hidden;
+    justify-content:center;
+    /* align-items: center; */
+}
+.main4_con{
+    height:80%;
+    width: 23%;
+    box-shadow: 5px 5px 10px rgb(160, 160, 160);
+    /* border: 2px solid black; */
+    border-radius: 2vh;
+}
+.main4_con img{
+    height: 50%;
+    width: 100%;
+    border-radius:2vh;
+
+}
+#Fimg{
+    height:100% ;
+}
+.main4_contain{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+
+}
+.main4_con a{
+    text-decoration:none;
+    color: black
+}
+.main4_contain p{
+    font-size: 1.2em;
+    line-height: 90%;
+    overflow-y: hidden;
+    
+}
+.main5{
+    height:40vh ;
+    width: 100vw;
+    overflow-y: hidden;
+    margin-top: 5%;
+}
+.main5 img{
+    height: 100%;
+    width:100%;
+}
+/*fotter*/
+
+.footer{
+    height: 60vh;
+    width: 100vw;
+    background-color: rgb(19, 19, 71);
+}
