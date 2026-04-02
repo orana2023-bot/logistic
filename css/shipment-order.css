@@ -19,7 +19,7 @@ header {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: zoomIn 0.8s ease;
 }
 
@@ -35,7 +35,9 @@ label {
   font-weight: bold;
 }
 
-input, select, button {
+input,
+select,
+button {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -44,9 +46,10 @@ input, select, button {
   transition: all 0.3s ease;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   border-color: #0077b6;
-  box-shadow: 0 0 8px rgba(0,119,182,0.5);
+  box-shadow: 0 0 8px rgba(0, 119, 182, 0.5);
   transform: scale(1.02);
 }
 
@@ -82,25 +85,48 @@ button:hover {
     margin: 15px;
     padding: 15px;
   }
+
   h2 {
     font-size: 20px;
   }
-  input, select, button {
+
+  input,
+  select,
+  button {
     font-size: 14px;
   }
 }
 
 @keyframes slideDown {
-  from { transform: translateY(-50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes zoomIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
