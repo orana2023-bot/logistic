@@ -198,19 +198,33 @@
     font-size: 1.2rem;
     /* text-align: center; */
 }
+
+.main3-3{
+    height: 40vh;
+    width: 100vw;
+    margin-top: 5%;
+}
+.main3-3 img{
+    height: 100%;
+    width: 100%;
+}
 .main4{
-    height:100vh;
+    height:95vh;
     width: 100vw;
     /* border: 1px solid black; */
     overflow-y: hidden;
     /* display: flex; */
     justify-content: center;
     align-items: center;
+    margin-top: 3%;
 
 
 }
+#h1{
+    padding-left: 30%;
+}
 .main4-4{
-    height:100vh;
+    height:100%;
     width:100%;
     display: flex;
     gap:1%;
@@ -225,6 +239,7 @@
     box-shadow: 5px 5px 10px rgb(160, 160, 160);
     /* border: 2px solid black; */
     border-radius: 2vh;
+    transition: all 0.5s linear;
 }
 .main4_con img{
     height: 50%;
@@ -251,22 +266,58 @@
     font-size: 1.2em;
     line-height: 90%;
     overflow-y: hidden;
+    /* width: 90%; */
+    /* text-align: center; */
     
+    
+    
+}
+h3{
+    color: grey;
 }
 .main5{
     height:40vh ;
     width: 100vw;
     overflow-y: hidden;
-    margin-top: 5%;
+    /* margin-top: 3%; */
 }
 .main5 img{
     height: 100%;
     width:100%;
 }
+.main4_con:hover{
+   transform:perspective(300px) translateZ(10px);
+   
+    
+}
+h1{
+    color: gray;
+}
+.main6{
+    height:80vh;
+    width: 100vw;
+}
+.main6 img{
+    height: 100%;
+    width: 100%;
+    /* position: fixed; */
+}
+
 /*fotter*/
 
 .footer{
     height: 60vh;
     width: 100vw;
     background-color: rgb(19, 19, 71);
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+.fotter{
+    height:100%;
+    width:30%;
+    border: 1px solid black;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
 }
