@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Logistics - Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #000428;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        header h1 {
+            color: #00c6ff;
+            font-size: 22px;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00c6ff;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center; 
+            background: linear-gradient(135deg, #004e92, #000428);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: slideUp 1.2s ease;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            animation: fadeInText 2s ease;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #00c6ff;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0072ff;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        section h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #00c6ff;
+        }
+
+        section p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media(max-width:768px) {
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Global Logistics</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Connecting the World</h2>
+        <p>Global Logistics ensures seamless cargo movement across continents with speed, safety, and reliability.</p>
+        <button class="btn" onclick="scrollToSection('about')">Learn More</button>
+    </div>
+
+    <section id="about">
+        <h3>About Us</h3>
+        <p>We are a leading logistics company specializing in international freight, supply chain solutions, and global
+            connectivity. Our mission is to simplify trade and empower businesses worldwide.</p>
+    </section>
+
+    <section id="services">
+        <h3>Our Services</h3>
+        <p>From air and sea freight to warehousing and distribution, we provide end-to-end logistics solutions tailored
+            to your needs.</p>
+    </section>
+
+    <section id="contact">
+        <h3>Contact Us</h3>
+        <p>Reach out to our team for inquiries, partnerships, or support. Together, we move the world forward.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Global Logistics Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>

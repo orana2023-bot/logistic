@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Logistics Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Global Logistics</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p class="footer-text">Dont have an account? <a href="signup.html">Sign Up</a></p>
+        <p class="footer-text">© 2026 Global Logistics Inc.</p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            if (user && pass) {
+                alert("Welcome " + user + "! Redirecting...");
+                window.location.href = "/index.html";
+            } else {
+                alert("Please fill in all fields.");
+            }
+        });
+    </script>
+</body>
+
+</html>
