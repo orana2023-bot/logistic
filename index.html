@@ -5,51 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
-    <title>Document</title>
+    <title>TransGlobal - Global Logistics</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    <!-- Fixed: Font Awesome 7.0.1 doesn't exist. Using 6.5.1 -->
+    <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css)"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
-
-
         <div class="first_nav_bar">
             <div class="f_left_nav"></div>
             <div class="f_right_nav">
-                <a href="">Search</a>
-                <a href="">Support</a>
-                <a href="">Conatct</a>
-                <a href="">Register</a>
-                <a href="">Login</a>
+                <a href="#">Search</a>
+                <a href="#">Support</a>
+                <!-- Fixed: Typo "Conatct" → "Contact" -->
+                <a href="#">Contact</a>
+                <a href="#">Register</a>
+                <a href="#">Login</a>
                 <button>Book now</button>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
             </div>
         </div>
+        <!-- Fixed: Removed extra closing </div> -->
 
-        </div>
         <div class="second_nav_bar">
             <div class="s_left_nav">
                 <div class="logo">
-                    <img src="assets/glogo.jpeg" alt="">
+                    <img src="assets/glogo.jpeg" alt="TransGlobal Logo">
                 </div>
                 <div class="name">
                     <h2>TransGlobal</h2>
                 </div>
             </div>
             <div class="s_right_nav">
-                <a href="">Service</a>
-                <a href="">Mange</a>
-                <a href="">Tracking</a>
-                <a href="">Book</a>
-                <a href="">About Us</a>
+                <!-- Added hamburger menu for mobile -->
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-links">
+                    <a href="#">Service</a>
+                    <!-- Fixed: Typo "Mange" → "Manage" -->
+                    <a href="#">Manage</a>
+                    <a href="#">Tracking</a>
+                    <a href="#">Book</a>
+                    <a href="#">About Us</a>
+                </nav>
             </div>
+        </div>
     </header>
-    <hero>
+
+    <!-- Fixed: <hero> is not a valid HTML element, changed to <main> -->
+    <main class="hero">
         <div class="main_video">
             <video class="background-video" autoplay muted playsinline loop>
                 <source src="assets/0330(2).mp4" type="video/mp4">
@@ -57,174 +71,265 @@
             </video>
         </div>
 
-        <div class="main">
+        <section class="main">
             <div class="main_left">
                 <h1>WELCOME TO TRANS GLOBAL</h1>
-                <P> your premier partner in global logistics and shipping. We specialize in moving goods across
+                <!-- Fixed: <P> → <p> (lowercase) -->
+                <p>Your premier partner in global logistics and shipping. We specialize in moving goods across
                     continents with unmatched speed, reliability, and security. From small parcels to oversized cargo,
                     we provide customized shipping solutions that cater to the needs of businesses and individuals
                     alike. Our advanced technology allows for real-time tracking, giving you full visibility into every
-                    step of your shipment’s journey. With a vast international network spanning major trade hubs and
+                    step of your shipment's journey. With a vast international network spanning major trade hubs and
                     remote regions, we ensure that your goods reach their destination safely and on time, every time. At
-                    Trans Global, we don’t just deliver packages—we connect people, businesses, and markets
+                    Trans Global, we don't just deliver packages—we connect people, businesses, and markets
                     across the globe. Our mission is to simplify global logistics, remove unnecessary barriers, and
                     create a seamless shipping experience for every customer. Trust us to handle your shipments with
                     care, precision, and professionalism, because your success is our priority.
-                </P>
+                </p>
             </div>
             <div class="main_right">
-
                 <div class="img img1"></div>
                 <div class="img img2"></div>
                 <div class="img img3"></div>
                 <div class="img img4"></div>
             </div>
-        </div>
-        <div class="main2">
-            <img src="assets/Screenshot 2026-03-31 122943.png" alt="">
-        </div>
-        <div class="main3">
-            <div class="main3_left"><img src="assets/premium_photo-1663050844165-47c1b3f2a809.avif" alt=""></div>
+        </section>
+
+        <section class="main2">
+            <img src="assets/Screenshot 2026-03-31 122943.png" alt="Statistics Overview">
+        </section>
+
+        <section class="main3">
+            <div class="main3_left">
+                <img src="assets/premium_photo-1663050844165-47c1b3f2a809.avif" alt="Logistics Operations">
+            </div>
             <div class="main3_right">
-                <h1>Why Choose Us?</h1>
+                <h2>Why Choose Us?</h2>
                 <p>
-                    <b>Advanced Technology:</b> Leveraging AI and data analytics to optimize your supply chain and
-                    reduce costs.<br>
-                    <b>Sustainable Practices:</b> Committed to eco-friendly shipping options to minimize environmental
-                    impact.<br>
-                    <b>Flexible Shipping Options:</b> From express delivery to economy shipping, choose the service that
-                    fits your timeline and budget.<br>
-                    <b>Comprehensive Insurance:</b> Protect your shipments with full coverage options tailored to your
-                    cargo’s value.<br>
-                    <b>End-to-End Visibility:</b> Transparent process from pickup to final delivery with detailed
-                    reporting.<br>
-                    <b>Global Partnerships:</b> Collaborations with leading carriers and customs agents worldwide to
-                    streamline operations.<br>
-                    <b>Multi-Modal Solutions: </b> combining air, sea, and land transport for efficient and
-                    cost-effective deliveries.<br>
-                    <b>Customs Expertise:</b> Skilled in navigating complex international regulations to avoid delays
-                    and extra costs.<br>
-                    <b>Scalable Services:</b> Whether you ship once a month or daily, our solutions grow with your
-                    business needs.<br>
-                    <b>User-Friendly Platform: </b> online dashboard for booking, tracking, and managing shipments.
+                    <strong>Advanced Technology:</strong> Leveraging AI and data analytics to optimize your supply chain and reduce costs.<br>
+                    <strong>Sustainable Practices:</strong> Committed to eco-friendly shipping options to minimize environmental impact.<br>
+                    <strong>Flexible Shipping Options:</strong> From express delivery to economy shipping, choose the service that fits your timeline and budget.<br>
+                    <strong>Comprehensive Insurance:</strong> Protect your shipments with full coverage options tailored to your cargo's value.<br>
+                    <strong>End-to-End Visibility:</strong> Transparent process from pickup to final delivery with detailed reporting.<br>
+                    <strong>Global Partnerships:</strong> Collaborations with leading carriers and customs agents worldwide to streamline operations.<br>
+                    <strong>Multi-Modal Solutions:</strong> Combining air, sea, and land transport for efficient and cost-effective deliveries.<br>
+                    <strong>Customs Expertise:</strong> Skilled in navigating complex international regulations to avoid delays and extra costs.<br>
+                    <strong>Scalable Services:</strong> Whether you ship once a month or daily, our solutions grow with your business needs.<br>
+                    <strong>User-Friendly Platform:</strong> Online dashboard for booking, tracking, and managing shipments.
                 </p>
             </div>
-        </div>
-         <div class="main3-3"><img src="assets/image.png" alt=""></div>
-        <div class="main4">
-            <h1 id="h1">Here are the primary types of Global Logistics
+        </section>
 
-            </h1>
+        <section class="main3-3">
+            <img src="assets/image.png" alt="Services Banner">
+        </section>
+
+        <section class="main4">
+            <h2>Here are the primary types of Global Logistics</h2>
             <div class="main4-4">
-                <div class="main4_con">
+                <article class="main4_con">
                     <div class="img">
-                        <img id="Fimg" src="assets/photo-1759171249029-ce1bee69979e.avif" alt="">
+                        <img src="assets/photo-1759171249029-ce1bee69979e.avif" alt="Ocean Freight">
                     </div>
-                    <a href="">
+                    <a href="#">
                         <div class="main4_contain">
-                            <h3>Ocean Freight
-                            </h3>
+                            <h3>Ocean Freight</h3>
                             <p>
-                                <b>a.</b> A most common method for transporting  large quantities of goods. <br><br>
-
-                              <b> b.</b> Involves shipping containers loaded onto cargo ships for ocean travel. <br><br>
-
-                               <b>c.</b> Cost-effective for heavy or bulk goods. <br><br>
-
-                                <b>d.</b> Suitable for long-distance transportation. <br><br>
-
-                              <b> e.</b> It has longer transit times compared to air freight.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="main4_con">
-                    <div class="img">
-                        <img src="assets/photo-1772965489870-8c1e2b9c29e7.avif" alt="">
-                    </div>
-                    <a href="">
-                        <div class="main4_contain">
-
-                            <h3>Air Freight</h3>
-                            <p><b>a.</b> quickest mode of transportation for international shipping.<br><br>
-
-                               <b> b.</b> Ideal for urgent deliveries of electronics, medical equipment, or expensive goods. <br><br>
-                                
-
-                               <b> c.</b> Provides rapid delivery compared to other logistics options. <br><br>
-
-                                <b>d.</b> Expensive because of higher fuel costs and limited space on planes. <br><br>
-                                <b>e.</b> Typically used when speed is a priority over cost efficiency.</p>
-                        </div>
-                    </a>
-
-                </div>
-                <div class="main4_con">
-                    <div class="img">
-                        <img src="assets/photo-1759272548470-d0686d071036.avif" alt="">
-                    </div>
-                    <a href="">
-                        <div class="main4_contain">
-
-                            <h3>Road Freight</h3>
-                            <p>
-                                <b>a.</b> transporting goods by trucks, ideal for short to medium distances. <br><br>
-
-                               <b> b.</b> Commonly used for domestic shipments or part of a multi-modal system. <br><br>
-                               <b> c.</b> Offers flexibility in delivery times and locations. <br><br>
-                               <b> d.</b> Can face delays due to traffic or weather conditions. <br><br>
-
-                               <b> e.</b> Versatile and widely applicable across various industries.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="main4_con">
-                    <div class="img">
-                        <img src="assets/photo-1764813824782-3077cd90976e.avif" alt="">
-                    </div>
-                    <a href="">
-                        <div class="main4_contain">
-
-                            <h3>Rail Transport</h3>
-                            <p><b>a.</b> Widely used in landlocked countries or regions with strong rail infrastructure. <br><br>
-
-                                <b>b.</b> Reliable and cost-effective for moving goods across large land areas. <br><br>
-
-                                <b>c.</b> Ideal for heavy or bulk items. <br><br>
-
-                                <b>d. </b>Often slower than road or air freight. <br><br>
-
-                                <b>e.</b> Less flexible in terms of delivery locations compared to other modes.
-
+                                <strong>a.</strong> A most common method for transporting large quantities of goods.<br><br>
+                                <strong>b.</strong> Involves shipping containers loaded onto cargo ships for ocean travel.<br><br>
+                                <strong>c.</strong> Cost-effective for heavy or bulk goods.<br><br>
+                                <strong>d.</strong> Suitable for long-distance transportation.<br><br>
+                                <strong>e.</strong> It has longer transit times compared to air freight.
                             </p>
                         </div>
                     </a>
+                </article>
+
+                <article class="main4_con">
+                    <div class="img">
+                        <img src="assets/photo-1772965489870-8c1e2b9c29e7.avif" alt="Air Freight">
+                    </div>
+                    <a href="#">
+                        <div class="main4_contain">
+                            <h3>Air Freight</h3>
+                            <p>
+                                <strong>a.</strong> Quickest mode of transportation for international shipping.<br><br>
+                                <strong>b.</strong> Ideal for urgent deliveries of electronics, medical equipment, or expensive goods.<br><br>
+                                <strong>c.</strong> Provides rapid delivery compared to other logistics options.<br><br>
+                                <strong>d.</strong> Expensive because of higher fuel costs and limited space on planes.<br><br>
+                                <strong>e.</strong> Typically used when speed is a priority over cost efficiency.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="main4_con">
+                    <div class="img">
+                        <img src="assets/photo-1759272548470-d0686d071036.avif" alt="Road Freight">
+                    </div>
+                    <a href="#">
+                        <div class="main4_contain">
+                            <h3>Road Freight</h3>
+                            <p>
+                                <strong>a.</strong> Transporting goods by trucks, ideal for short to medium distances.<br><br>
+                                <strong>b.</strong> Commonly used for domestic shipments or part of a multi-modal system.<br><br>
+                                <strong>c.</strong> Offers flexibility in delivery times and locations.<br><br>
+                                <strong>d.</strong> Can face delays due to traffic or weather conditions.<br><br>
+                                <strong>e.</strong> Versatile and widely applicable across various industries.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="main4_con">
+                    <div class="img">
+                        <img src="assets/photo-1764813824782-3077cd90976e.avif" alt="Rail Transport">
+                    </div>
+                    <a href="#">
+                        <div class="main4_contain">
+                            <h3>Rail Transport</h3>
+                            <p>
+                                <strong>a.</strong> Widely used in landlocked countries or regions with strong rail infrastructure.<br><br>
+                                <strong>b.</strong> Reliable and cost-effective for moving goods across large land areas.<br><br>
+                                <strong>c.</strong> Ideal for heavy or bulk items.<br><br>
+                                <strong>d.</strong> Often slower than road or air freight.<br><br>
+                                <strong>e.</strong> Less flexible in terms of delivery locations compared to other modes.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="main5">
+            <img src="assets/Screenshot 2026-03-31 143357.png" alt="Call to Action">
+        </section>
+
+        <section class="main6">
+            <img src="assets/image copy.png" alt="Partners">
+        </section>
+    </main>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+ <section class="cta-section">
+    <div class="cta-container">
+        <div class="cta-content">
+            <span class="cta-badge">Global Logistics Leader</span>
+            <h2>Ready to Streamline Your Supply Chain?</h2>
+            <p>Join thousands of businesses that trust TransGlobal for fast, secure, and smart shipping solutions worldwide. Get your custom quote in minutes.</p>
+            
+            <div class="cta-actions">
+                <a href="#" class="btn-primary-cta">Start Shipping Now</a>
+                <a href="#" class="btn-secondary-cta">View Pricing</a>
+            </div>
+        </div>
+
+        <div class="cta-stats">
+            <div class="stat-box">
+                <i class="fa-solid fa-earth-americas"></i>
+                <div>
+                    <strong>200+</strong>
+                    <span>Countries Reached</span>
                 </div>
             </div>
-        </div>  
-        <div class="main5">
-            <img src="assets/Screenshot 2026-03-31 143357.png" alt="">
+            <div class="stat-box">
+                <i class="fa-solid fa-truck-fast"></i>
+                <div>
+                    <strong>15k+</strong>
+                    <span>Daily Deliveries</span>
+                </div>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-headset"></i>
+                <div>
+                    <strong>24/7</strong>
+                    <span>Expert Support</span>
+                </div>
+            </div>
         </div>
-        <div class="main6"><img src="assets/image copy.png" alt=""></div>
-    </hero>
-    <footer>
-        <div class="footer">
-             <div class="fotter">
-                <h3>About Us</h3>
-             </div>
-             <div class="fotter">
-                <h3>Support</h3>
-             </div>
-             <div class="fotter">
-                <h3>Service</h3>
-             </div>
-             <div class="fotter">
-                <h3>Contact with Us</h3>
-             </div>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-column about">
+                <div class="footer-logo">
+                    <img src="assets/glogo.jpeg" alt="TransGlobal Logo">
+                    <h2>TransGlobal</h2>
+                </div>
+                <p>Connecting the world through reliable logistics, advanced tracking, and sustainable shipping solutions. Your success is our priority.</p>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Ocean Freight</a></li>
+                    <li><a href="#">Air Freight</a></li>
+                    <li><a href="#">Road Transport</a></li>
+                    <li><a href="#">Warehousing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Logistics Ave, NY</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (800) 123-4567</p>
+                <p><i class="fa-solid fa-envelope"></i> info@transglobal.com</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <form class="footer-form">
+                    <input type="email" placeholder="Email address">
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
         </div>
-    </footer>
 
+        <div class="footer-bottom">
+            <p>&copy; 2026 TransGlobal. All Rights Reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
+    <!-- Added: JavaScript for mobile menu toggle -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
