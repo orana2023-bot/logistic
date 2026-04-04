@@ -3,64 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Track Shipment</title>
+  <title>Document</title>
   <link rel="stylesheet" href="css/shipment.css">
+  <title>Track Shipment</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shipment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">Logo</div>
-      <nav>
-        <ul>
-          <li><a href="                     
-          <li><a href="#">Shipment</a></li>
-          <li><a href="                       
-        </ul>
-      </nav>
-    </header>
+  
+  <header>
+    <div class="first_nav_bar">
+      <div class="f_left_nav"></div>
+      <div class="f_right_nav">
+        <a href="#">Search</a>
+        <a href="#">Support</a>
+        <a href="#">Contact</a>
+        <a href="#">Register</a>
+        <a href="#">Login</a>
+        <button>Book now</button>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </div>
 
-    <main>
-      <section class="track-section">
-        <h2>Track 📦</h2>
+    <div class="second_nav_bar">
+      <div class="s_left_nav">
+        <div class="logo">
+          <img src="assets/glogo.jpeg" alt="TransGlobal Logo">
+        </div>
+        <div class="name">
+          <h2>TransGlobal</h2>
+        </div>
+      </div>
+      <div class="s_right_nav">
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-links">
+          <a href="index.html">Service</a>
+          <a href="#">Manage</a>
+          <a href="track_shipment.html">Tracking</a>
+          <a href="#">Book</a>
+          <a href="#">About Us</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="tracking-main">
+    <section class="track-section">
+      <div class="track-card">
+        <h2>Track Your Shipment 📦</h2>
+        <p>Enter your tracking number below to see the current status of your package.</p>
         <div class="search-box">
-          <input type="text" placeholder="Enter Tracking ID...">
-          <button>Track</button>
+          <input type="text" id="trackingInput" placeholder="Enter Tracking ID (e.g., TRK001)">
+          <button id="trackBtn">Track</button>
+        </div>
+      </div>
+
+      <div id="trackingResult" class="tracking-result-container hidden">
+        <div class="status-header">
+          <div class="info-group">
+            <span class="label">Tracking ID:</span>
+            <span class="value" id="resTrackingId">--</span>
+          </div>
+          <div class="info-group">
+            <span class="label">Current Status:</span>
+            <span class="value status-pill" id="resStatusText">--</span>
+          </div>
+          <div class="info-group">
+            <span class="label">Location:</span>
+            <span class="value" id="resLocation">--</span>
+          </div>
         </div>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Tracking ID</th>
-              <th>Status</th>
-              <th>Location</th>
-              <th>Last Update</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>99011715120</td>
-              <td>Slesemera</td>
-              <td>In Traska</td>
-              <td>---</td>
-            </tr>
-            <tr>
-              <td>29012095026</td>
-              <td>Blesemera</td>
-              <td>In Transit</td>
-              <td>---</td>
-            </tr>
-            <tr>
-              <td>19012212155</td>
-              <td>---</td>
-              <td>---</td>
-              <td>---</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="progress-container">
+          <ul class="progressbar">
+            <li id="step1"><span>Ordered</span></li>
+            <li id="step2"><span>Shipped</span></li>
+            <li id="step3"><span>In Transit</span></li>
+            <li id="step4"><span>Delivered</span></li>
+          </ul>
+        </div>
+      </div>
 
-        <a href="#" class="view-all">View All ></a>
-      </section>
-    </main>
-  </div>
+      <div id="errorMsg" class="error-msg hidden">
+        <p><i class="fa-solid fa-circle-exclamation"></i> Invalid Tracking ID. Please try again.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-column about">
+          <div class="footer-logo">
+            <img src="assets/glogo.jpeg" alt="TransGlobal Logo">
+            <h2>TransGlobal</h2>
+          </div>
+          <p>Connecting the world through reliable logistics, advanced tracking, and sustainable shipping solutions.</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Ocean Freight</a></li>
+            <li><a href="#">Air Freight</a></li>
+            <li><a href="#">Road Transport</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p><i class="fa-solid fa-location-dot"></i> 123 Logistics Ave, NY</p>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 123-4567</p>
+        </div>
+        <div class="footer-column">
+          <h3>Newsletter</h3>
+          <form class="footer-form">
+            <input type="email" placeholder="Email address">
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TransGlobal. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mock database based on your dashboard data
+    const shipments = [
+      { trackingId: "TRK001", status: "Pending", currentLocation: "Kolkata", step: 1 },
+      { trackingId: "TRK002", status: "In Transit", currentLocation: "Delhi", step: 3 },
+      { trackingId: "TRK003", status: "Delivered", currentLocation: "Mumbai", step: 4 },
+      { trackingId: "TRK004", status: "Shipped", currentLocation: "Hyderabad", step: 2 }
+    ];
+
+    const trackBtn = document.getElementById('trackBtn');
+    const trackingInput = document.getElementById('trackingInput');
+    const resultContainer = document.getElementById('trackingResult');
+    const errorMsg = document.getElementById('errorMsg');
+
+    trackBtn.addEventListener('click', () => {
+      const id = trackingInput.value.trim().toUpperCase();
+      const shipment = shipments.find(s => s.trackingId === id);
+
+      if (shipment) {
+        errorMsg.classList.add('hidden');
+        resultContainer.classList.remove('hidden');
+        
+        document.getElementById('resTrackingId').innerText = shipment.trackingId;
+        document.getElementById('resStatusText').innerText = shipment.status;
+        document.getElementById('resLocation').innerText = shipment.currentLocation;
+
+        // Update progress bar active states
+        const steps = ['step1', 'step2', 'step3', 'step4'];
+        steps.forEach((stepId, index) => {
+          const el = document.getElementById(stepId);
+          if (index < shipment.step) {
+            el.classList.add('active');
+          } else {
+            el.classList.remove('active');
+          }
+        });
+      } else {
+        resultContainer.classList.add('hidden');
+        errorMsg.classList.remove('hidden');
+      }
+    });
+
+    // Basic mobile menu toggle logic
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
