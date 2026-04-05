@@ -28,7 +28,6 @@ body {
 .register-left {
     flex: 1;
     /* background: linear-gradient(135deg, #3a93aa, #69adf0); */
-    background: linear-gradient(45deg, #4facfe, #00f2fe);
     color: white;
     padding: 50px;
     display: flex;
