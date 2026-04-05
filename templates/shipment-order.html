@@ -3,15 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/shipment-order.css">
-<script src="js/shipment-order.js"></script>
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="/css/shipment-order.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
   <header>
-    <h1>International Shipment</h1>
-  </header>
+        <div class="first_nav_bar">
+            <div class="f_left_nav"></div>
+            <div class="f_right_nav">
+                <a href="#">Search</a>
+                <a href="#">Support</a>
+                <!-- Fixed: Typo "Conatct" → "Contact" -->
+                <a href="#">Contact</a>
+                <a href="#">Register</a>
+                <a href="#">Login</a>
+                <button id="nav-button">Book now</button>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Fixed: Removed extra closing </div> -->
+
+        <div class="second_nav_bar">
+            <div class="s_left_nav">
+                <div class="logo">
+                    <img src="/assets/glogo.jpeg" alt="TransGlobal Logo">
+                </div>
+                <div class="name">
+                    <h2>TransGlobal</h2>
+                </div>
+            </div>
+            <div class="s_right_nav">
+                <!-- Added hamburger menu for mobile -->
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-links">
+                    <a href="#">Service</a>
+                    <!-- Fixed: Typo "Mange" → "Manage" -->
+                    <a href="#">Manage</a>
+                    <a href="#">Tracking</a>
+                    <a href="#">Book</a>
+                    <a href="#">About Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
 
   <div class="container">
     <h2>Shipment Details</h2>
@@ -37,14 +83,82 @@
       <label for="weight">Package Weight (kg):</label>
       <input type="number" id="weight" placeholder="Enter weight" required>
 
+      <label for="transport ">Transport Medium:</label>
+      <select id="tramsport"required>
+        <option value="">select transport</option>
+        <option value="Ocean">Ocean</option>
+        <option value="Air">Air</option>
+        <option value="Rail">Rail</option>
+      </select>
+      
       <button type="button" onclick="calculateShipment()">Calculate Cost</button>
     </form>
 
     <div class="result" id="result"></div>
   </div>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-column about">
+                <div class="footer-logo">
+                    <img src="/assets/glogo.jpeg" alt="TransGlobal Logo">
+                    <h2>TransGlobal</h2>
+                </div>
+                <p>Connecting the world through reliable logistics, advanced tracking, and sustainable shipping solutions. Your success is our priority.</p>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Ocean Freight</a></li>
+                    <l><a href="#">Road Transport</a></li>
+                    <li><a href="#">Warehousing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Logistics Ave, NY</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (800) 123-4567</p>
+                <p><i class="fa-solid fa-envelope"></i> info@transglobal.com</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <form class="footer-form">
+                    <input type="email" placeholder="Email address">
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 TransGlobal. All Rights Reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
+    <script src="js/shipment-order.js"></script>
 
-    
 </body>
 </html>
