@@ -62,7 +62,6 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .f_right_nav a {
@@ -670,7 +669,8 @@ header {
     }
     
     .f_right_nav {
-        gap: 12px;
+        gap: 8px;
+        display: flex;
     }
     
     .f_right_nav a {
