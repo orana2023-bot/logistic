@@ -1139,6 +1139,7 @@ header {
     transition: all 0.3s ease;
     justify-content: center;
     align-items: center;
+    max-height: 300px;
     
 }
 
