@@ -1,47 +1,63 @@
-const shipments = [
-      { trackingId: "TRK001", status: "Pending", currentLocation: "Kolkata", step: 1 },
-      { trackingId: "TRK002", status: "In Transit", currentLocation: "Delhi", step: 3 },
-      { trackingId: "TRK003", status: "Delivered", currentLocation: "Mumbai", step: 4 },
-      { trackingId: "TRK004", status: "Shipped", currentLocation: "Hyderabad", step: 2 }
-    ];
-
+document.addEventListener('DOMContentLoaded', () => {
     const trackBtn = document.getElementById('trackBtn');
     const trackingInput = document.getElementById('trackingInput');
     const resultContainer = document.getElementById('trackingResult');
     const errorMsg = document.getElementById('errorMsg');
 
-    trackBtn.addEventListener('click', () => {
-      const id = trackingInput.value.trim().toUpperCase();
-      const shipment = shipments.find(s => s.trackingId === id);
+    // Mock Data based on your dashboard system
+    const shipments = {
+        "TRK001": { status: "Ordered", location: "Kolkata, IN", percent: 25 },
+        "TRK002": { status: "Shipped", location: "Warehouse A, Delhi", percent: 50 },
+        "TRK003": { status: "In Transit", location: "On Route to Mumbai", percent: 75 },
+        "TRK004": { status: "Delivered", location: "Hyderabad, IN", percent: 100 }
+    };
 
-      if (shipment) {
+    trackBtn.addEventListener('click', () => {
+        const id = trackingInput.value.trim().toUpperCase();
+        
+        if (shipments[id]) {
+            showResult(id, shipments[id]);
+        } else {
+            showError();
+        }
+    });
+
+    function showResult(id, data) {
         errorMsg.classList.add('hidden');
         resultContainer.classList.remove('hidden');
-        
-        document.getElementById('resTrackingId').innerText = shipment.trackingId;
-        document.getElementById('resStatusText').innerText = shipment.status;
-        document.getElementById('resLocation').innerText = shipment.currentLocation;
 
-        // Update progress bar active states
-        const steps = ['step1', 'step2', 'step3', 'step4'];
-        steps.forEach((stepId, index) => {
-          const el = document.getElementById(stepId);
-          if (index < shipment.step) {
-            el.classList.add('active');
-          } else {
-            el.classList.remove('active');
-          }
+        // Update Text Info
+        document.getElementById('resTrackingId').innerText = id;
+        document.getElementById('resStatusText').innerText = data.status;
+        document.getElementById('resLocation').innerText = data.location;
+
+        // Update Bootstrap Progress Bar
+        const progressBar = document.getElementById('dynamicProgressBar');
+        progressBar.style.width = data.percent + "%";
+        progressBar.innerText = data.percent + "%";
+        progressBar.setAttribute('aria-valuenow', data.percent);
+
+        // Dynamic Color Logic
+        if (data.percent <= 25) progressBar.className = "progress-bar progress-bar-striped progress-bar-animated bg-info";
+        else if (data.percent <= 75) progressBar.className = "progress-bar progress-bar-striped progress-bar-animated bg-primary";
+        else progressBar.className = "progress-bar progress-bar-striped progress-bar-animated bg-success";
+
+        // Highlight Labels
+        updateLabels(data.percent);
+    }
+
+    function updateLabels(percent) {
+        const labels = ['ordered', 'shipped', 'transit', 'delivered'];
+        labels.forEach((label, index) => {
+            const element = document.getElementById(`label-${label}`);
+            const stepPercent = (index + 1) * 25;
+            element.style.color = percent >= stepPercent ? "#1e3c72" : "#adb5bd";
+            element.style.opacity = percent >= stepPercent ? "1" : "0.5";
         });
-      } else {
+    }
+
+    function showError() {
         resultContainer.classList.add('hidden');
         errorMsg.classList.remove('hidden');
-      }
-    });
-
-    // Basic mobile menu toggle logic
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('active');
-    });
+    }
+});
