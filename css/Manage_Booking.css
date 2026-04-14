@@ -1,0 +1,220 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial;
+ }
+
+ /* Container */
+ .container {
+     width: 95%;
+     margin: 20px auto;
+ }
+
+ /* Dashboard */
+ .dashboard {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+     gap: 15px;
+     margin-bottom: 20px;
+ }
+
+ .card-box {
+     padding: 20px;
+     border-radius: 12px;
+     color: white;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ }
+
+ .card-box h1 {
+     font-size: 28px;
+ }
+
+ .total {
+     background: linear-gradient(45deg, #6366f1, #4f46e5);
+ }
+
+ .delivered {
+     background: linear-gradient(45deg, #22c55e, #16a34a);
+ }
+
+ .pending {
+     background: linear-gradient(45deg, #f59e0b, #d97706);
+ }
+
+ .shipped {
+     background: linear-gradient(45deg, #3b82f6, #2563eb);
+ }
+
+ /* Progress */
+ .progress-box {
+     background: white;
+     padding: 15px;
+     border-radius: 10px;
+     margin-bottom: 20px;
+ }
+
+ .progress-bar {
+     width: 100%;
+     height: 20px;
+     background: #ddd;
+     border-radius: 20px;
+     overflow: hidden;
+ }
+
+ #progress {
+     height: 100%;
+     width: 0%;
+     background: #22c55e;
+     transition: 0.5s;
+ }
+
+ /* Cards */
+ .card {
+     background: white;
+     padding: 15px;
+     border-radius: 10px;
+     margin-bottom: 20px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     overflow-x: auto;
+ }
+
+ /* Table default */
+ .card table {
+     width: 100%;
+     border-collapse: collapse;
+     min-width: 800px;
+     /* prevents breaking */
+     /* overflow-x: auto; */
+ }
+
+ /* Mobile view */
+ @media (max-width: 768px) {
+
+     .card table {
+         min-width: 700px;
+         /* allows horizontal scroll */
+     }
+
+     th,
+     td {
+         font-size: 12px;
+         padding: 6px;
+     }
+ }
+
+ /* Form */
+ .form input,
+ .form select {
+     padding: 8px;
+     margin: 5px;
+     width: 13%;
+ }
+
+ .form button {
+     padding: 8px;
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+ }
+
+ .add-btn {
+     background: #2563eb;
+     color: white;
+ }
+
+ .clear-btn {
+     background: red;
+     color: white;
+ }
+
+ /* Search */
+ .search {
+     width: 60%;
+     padding: 10px;
+     margin-bottom: 10px;
+ }
+
+ /* Table */
+ table {
+     width: 100%;
+     border-collapse: collapse;
+ }
+
+ th,
+ td {
+     padding: 8px;
+     text-align: center;
+ }
+
+ th {
+     background: #1f2937;
+     color: white;
+ }
+
+ tr:nth-child(even) {
+     background: #f9fafb;
+ }
+
+ tr:hover {
+     background: #e5e7eb;
+ }
+
+ /* Buttons */
+ .btn {
+     padding: 5px 8px;
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+ }
+
+ .view {
+     background: green;
+     color: white;
+ }
+
+ .edit {
+     background: orange;
+ }
+
+ .delete {
+     background: red;
+     color: white;
+ }
+
+ /* Modal */
+ .modal {
+     display: none;
+     position: fixed;
+     top: 10%;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     z-index: 200;
+ }
+
+ .modal-content {
+     background: white;
+     padding: 20px;
+     width: 320px;
+     margin: 80px auto;
+     border-radius: 10px;
+ }
+
+ /* Responsive */
+ @media(max-width:768px) {
+
+     .form input,
+     .form select {
+         width: 100%;
+         display: block;
+     }
+
+     .search {
+         width: 100%;
+     }
+ }
