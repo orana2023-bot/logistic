@@ -1238,22 +1238,25 @@ header {
 }
 
 .dropdown-menu {
-  display: none;
+  display: flex;
+  gap: 20px;
+  visibility: hidden;
+  pointer-events: none;
   position: absolute;
   background: #fff;
   min-width: 540px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  border-radius: 6px;
-  padding: 12px;
-  z-index: 1;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  padding: 16px;
+  z-index: 9999;
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
 }
 
 .dropdown:hover .dropdown-menu {
-  display: flex;
-  gap: 20px;
+  visibility: visible;
+  pointer-events: auto;
   opacity: 1;
   transform: translateY(0);
 }
@@ -1306,22 +1309,25 @@ header {
 }
 
 .dropdown-menu2 {
-  display: none;
+  display: flex;
+  gap: 20px;
+  visibility: hidden;
+  pointer-events: none;
   position: absolute;
   background: #fff;
   min-width: 340px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  border-radius: 6px;
-  padding: 12px;
-  z-index: 1;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  padding: 16px;
+  z-index: 9999;
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
 }
 
 .dropdown2:hover .dropdown-menu2 {
-  display: flex;
-  gap: 20px;
+  visibility: visible;
+  pointer-events: auto;
   opacity: 1;
   transform: translateY(0);
 }

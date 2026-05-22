@@ -4,35 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Logistics Login</title>
+    <title>SATTAR EXIM LLP Login</title>
     <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
     <div class="login-container">
-        <h2>Global Logistics</h2>
+        <h2>SATTAR EXIM LLP</h2>
         <form id="loginForm">
             <div class="input-group">
-                <input type="text" id="username" placeholder="Username" required>
+                <input type="email" id="username" placeholder="Email Address" required>
             </div>
             <div class="input-group">
                 <input type="password" id="password" placeholder="Password" required>
             </div>
             <button type="submit" class="btn">Login</button>
         </form>
-        <p class="footer-text">Dont have an account? <a href="/templates/Register.html">Sign Up</a></p>
-        <p class="footer-text">© 2026 Global Logistics Inc.</p>
+        <p class="footer-text">Don't have an account? <a href="/templates/Register.html">Sign Up</a></p>
+        <p class="footer-text">© 2026 SATTAR EXIM LLP</p>
     </div>
 
     <script>
         document.getElementById("loginForm").addEventListener("submit", function (e) {
             e.preventDefault();
-            const user = document.getElementById("username").value;
-            const pass = document.getElementById("password").value;
+            const emailVal = document.getElementById("username").value;
+            const passwordVal = document.getElementById("password").value;
 
-            if (user && pass) {
-                alert("Welcome " + user + "! Redirecting...");
-                window.location.href = "/index.html";
+            if (emailVal && passwordVal) {
+                fetch('/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: emailVal, password: passwordVal })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message + " Redirecting to Hub...");
+                        window.location.href = "/Managment_Tools.html/Hub.html";
+                    } else {
+                        alert(data.message || "Invalid credentials.");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert("An error occurred. Make sure app.py is running and XAMPP MySQL is active.");
+                });
             } else {
                 alert("Please fill in all fields.");
             }
