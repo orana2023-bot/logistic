@@ -1,0 +1,17 @@
+# Netlify Configuration File
+# Tells Netlify how to deploy and route your website.
+
+[build]
+  # Since this is a pure HTML/JS/CSS frontend, the publish folder is the root directory
+  publish = "."
+
+  # No build command is needed as there are no bundlers like React/Vite
+  command = ""
+
+[[redirects]]
+  # Redirect any frontend API calls to your hosted backend (e.g. Render, Railway, or PythonAnywhere)
+  # Once you deploy your app.py backend, replace the "to" URL below with your actual backend URL.
+  from = "/api/*"
+  to = "http://localhost:5000/api/:splat"
+  status = 200
+  force = true
